@@ -9,10 +9,10 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: 'bg-forest text-white hover:bg-forest-600 hover:shadow-medium',
-        rose: 'border-2 rounded-md text-black cursor-pointer hover:text-white hover:border-blue-700 hover:bg-blue-700 hover:shadow-rose',
+        rose: 'border-2 rounded-md text-black cursor-pointer hover:text-white hover:border-blue-800 hover:bg-blue-800 hover:shadow-blue-800',
         peach: 'bg-peach text-forest hover:bg-peach-400 hover:shadow-petal',
         outline:
-          'border-2 rounded-md border-forest text-forest hover:bg-forest hover:text-gray-500 cursor-pointer',
+          'border-2 rounded-md border-forest text-forest hover:bg-forest hover:text-blue-700 cursor-pointer',
         outlineRose:
           'border-2 rounded-md border-rose text-rose hover:bg-rose hover:text-white',
         outlineWhite:

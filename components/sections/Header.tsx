@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+import logo from '../../public/images/lamiflora-logo.png';
 import Link from 'next/link';
 import { Menu, X, ChevronDown, Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -68,52 +70,8 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
             <div className="w-12 h-12 relative">
-              {/* Lamiflora Logo SVG - Flower design */}
-              <svg
-                viewBox="0 0 48 48"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-full h-full"
-              >
-                <circle cx="24" cy="24" r="22" fill="#1B4D3E" />
-                {/* Flower petals */}
-                <ellipse cx="24" cy="14" rx="5" ry="8" fill="#C41E3A" />
-                <ellipse
-                  cx="24"
-                  cy="14"
-                  rx="5"
-                  ry="8"
-                  fill="#C41E3A"
-                  transform="rotate(72 24 24)"
-                />
-                <ellipse
-                  cx="24"
-                  cy="14"
-                  rx="5"
-                  ry="8"
-                  fill="#C41E3A"
-                  transform="rotate(144 24 24)"
-                />
-                <ellipse
-                  cx="24"
-                  cy="14"
-                  rx="5"
-                  ry="8"
-                  fill="#C41E3A"
-                  transform="rotate(216 24 24)"
-                />
-                <ellipse
-                  cx="24"
-                  cy="14"
-                  rx="5"
-                  ry="8"
-                  fill="#C41E3A"
-                  transform="rotate(288 24 24)"
-                />
-                {/* Center */}
-                <circle cx="24" cy="24" r="5" fill="#D4A84B" />
-                <circle cx="24" cy="24" r="3" fill="#FFAA8A" />
-              </svg>
+              {/* Lamiflora Logo - Flower design */}
+              <Image src={logo} width={50} height={50} alt="Lamiflora Logo" />
             </div>
             <div className="flex flex-col">
               <span className="font-heading text-xl font-bold text-forest leading-tight">

@@ -1,7 +1,8 @@
 'use client';
 
-import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
+import logo from '../../public/images/lamiflora-logo.png';
 import {
   Twitter,
   Linkedin,
@@ -80,10 +81,11 @@ const socialLinks = [
 ];
 
 const certifications = [
-  'Fairtrade Certified',
-  'MPS-ABC',
+  'FPC Kenya',
+  'Sedex',
+  'AFFA',
   'GlobalG.A.P.',
-  'Rainforest Alliance',
+  'Kenya Flower Council',
 ];
 
 export default function Footer() {
@@ -97,58 +99,10 @@ export default function Footer() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 relative">
-                <svg
-                  viewBox="0 0 48 48"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-full h-full"
-                >
-                  <circle
-                    cx="24"
-                    cy="24"
-                    r="22"
-                    fill="#000"
-                    fillOpacity="0.1"
-                  />
-                  <ellipse cx="24" cy="14" rx="5" ry="8" fill="#C41E3A" />
-                  <ellipse
-                    cx="24"
-                    cy="14"
-                    rx="5"
-                    ry="8"
-                    fill="#C41E3A"
-                    transform="rotate(72 24 24)"
-                  />
-                  <ellipse
-                    cx="24"
-                    cy="14"
-                    rx="5"
-                    ry="8"
-                    fill="#C41E3A"
-                    transform="rotate(144 24 24)"
-                  />
-                  <ellipse
-                    cx="24"
-                    cy="14"
-                    rx="5"
-                    ry="8"
-                    fill="#C41E3A"
-                    transform="rotate(216 24 24)"
-                  />
-                  <ellipse
-                    cx="24"
-                    cy="14"
-                    rx="5"
-                    ry="8"
-                    fill="#C41E3A"
-                    transform="rotate(288 24 24)"
-                  />
-                  <circle cx="24" cy="24" r="5" fill="#D4A84B" />
-                  <circle cx="24" cy="24" r="3" fill="#FFAA8A" />
-                </svg>
+                <Image src={logo} width={50} height={50} alt="Lamiflora Logo" />
               </div>
               <div className="flex flex-col">
-                <span className="font-heading text-xl font-bold text-black leading-tight">
+                <span className="font-heading text-xl font-bold text-forest leading-tight">
                   LAMIFLORA
                 </span>
                 <span className="text-xs text-black/60 tracking-widest uppercase">
@@ -158,9 +112,9 @@ export default function Footer() {
             </Link>
 
             <p className="text-black/70 mb-6 leading-relaxed">
-              Premium flower farm cultivating beauty and sustainability since
-              1995. From our fields in Kenya to destinations worldwide, we
-              deliver excellence in every bloom.
+              A flower farm cultivating beauty and sustainability since 1995.
+              From our fields in Kenya to destinations worldwide, we deliver
+              excellence in every bloom.
             </p>
 
             {/* Contact Info */}
