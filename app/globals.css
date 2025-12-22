@@ -1,8 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --forest: #1B4D3E;
+  --forest-light: #2D8B68;
+  --rose: #C41E3A;
+  --rose-light: #E24563;
+  --lami-blue: #1447e6;
+  --peach: #FFAA8A;
+  --lavender: #9B7BB8;
+  --gold: #D4A84B;
+  --cream: #FDF8F3;
+  --white: #ffffff;
 }
 
 @theme inline {
@@ -12,15 +23,256 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+    @apply font-semibold text-[var(--forest)];
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+  }
+
+  h2 {
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+  }
+
+  h3 {
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+  }
+
+  p {
+    @apply text-base leading-relaxed;
+  }
+
+  a {
+    @apply no-underline transition-colors duration-300;
+  }
+
+  img {
+    @apply max-w-full h-auto block;
+  }
+}
+
+@layer components {
+  /* Button Styles */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-[var(--forest)] text-white font-semibold transition-all duration-300 hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-[var(--rose)] text-white font-semibold transition-all duration-300 hover:shadow-lg;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-6 py-3 border-2 border-[var(--forest)] text-[var(--forest)] font-semibold transition-all duration-300 hover:bg-[var(--forest)] hover:text-white;
+  }
+
+  .btn-outline-white {
+    @apply inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white font-semibold transition-all duration-300 hover:bg-white hover:text-[var(--forest)];
+  }
+
+  /* Card Styles */
+  .card {
+    @apply bg-white rounded-lg shadow-sm p-6 transition-all duration-300 hover:shadow-md;
+  }
+
+  .card-hover {
+    @apply hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  /* Section Styles */
+  .section {
+    @apply py-16 md:py-24 px-4 md:px-8;
+  }
+
+  .section-forest {
+    @apply bg-[var(--forest)] text-white;
+  }
+
+  .section-cream {
+    @apply bg-[var(--cream)];
+  }
+
+  .section-rose {
+    @apply bg-rose-50;
+  }
+
+  /* Container */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 md:px-8;
+  }
+
+  /* Rose accent bar */
+  .rose-bar {
+    @apply w-16 h-1 bg-[var(--rose)] mb-4;
+  }
+
+  /* Gold accent bar */
+  .gold-bar {
+    @apply w-16 h-1 bg-[var(--gold)] mb-4;
+  }
+
+  /* Text with rose underline */
+  .text-rose-underline {
+    @apply relative inline-block;
+  }
+
+  .text-rose-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-[var(--rose)];
+  }
+
+  /* Floral decorations */
+  .floral-corner {
+    @apply absolute pointer-events-none opacity-80;
+  }
+
+  /* Stats counter */
+  .stat-number {
+    @apply text-4xl md:text-5xl font-bold text-[var(--forest)];
+  }
+
+  .stat-label {
+    @apply text-sm text-gray-600 mt-2;
+  }
+
+  /* Navigation styles */
+  .nav-link {
+    @apply relative text-gray-700 transition-colors duration-300 font-medium hover:text-[var(--forest)];
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-[var(--lami-blue)] transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  /* Form inputs */
+  .input-field {
+    @apply w-full px-4 py-3 border border-gray-300 focus:outline-none focus:border-[var(--rose)] focus:ring-1 focus:ring-[var(--rose)] transition-all duration-300;
+  }
+
+  /* Image overlay effect */
+  .image-overlay {
+    @apply relative overflow-hidden;
+  }
+
+  .image-overlay::after {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-t from-[var(--forest)]/60 via-transparent to-transparent opacity-0 transition-opacity duration-300;
+  }
+
+  .image-overlay:hover::after {
+    @apply opacity-100;
+  }
+
+  /* Elegant quote style */
+  .quote-accent {
+    @apply italic text-xl text-[var(--forest)]/80;
+  }
+}
+
+@layer utilities {
+  /* Text gradient */
+  .text-gradient-rose {
+    @apply bg-gradient-to-r from-[var(--rose)] to-[var(--peach)] bg-clip-text text-transparent;
+  }
+
+  .text-gradient-forest {
+    @apply bg-gradient-to-r from-[var(--forest)] to-[var(--forest-light)] bg-clip-text text-transparent;
+  }
+
+  /* Animation delays */
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
+
+  /* Floral background patterns */
+  .bg-floral-light {
+    background-image: radial-gradient(circle at 20% 80%, rgba(255, 170, 138, 0.1) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 20%, rgba(196, 30, 58, 0.05) 0%, transparent 50%),
+                      radial-gradient(circle at 40% 40%, rgba(155, 123, 184, 0.05) 0%, transparent 40%);
+  }
+
+  /* Petal shapes */
+  .petal-shape {
+    clip-path: ellipse(50% 40% at 50% 60%);
+  }
+
+  /* Custom scrollbar */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    @apply bg-[var(--cream)];
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply bg-[var(--rose)] rounded-full;
+  }
+
+  /* Aspect ratios */
+  .aspect-4-3 { aspect-ratio: 4 / 3; }
+  .aspect-3-2 { aspect-ratio: 3 / 2; }
+  .aspect-16-9 { aspect-ratio: 16 / 9; }
+  .aspect-3-4 { aspect-ratio: 3 / 4; }
+}
+
+/* Custom focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--rose);
+  outline-offset: 2px;
+}
+
+/* Selection styles */
+::selection {
+  background-color: var(--peach);
+  color: var(--forest);
+}
+
+/* Smooth image loading */
+img {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+img[loading="lazy"] {
+  opacity: 1;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
 }
