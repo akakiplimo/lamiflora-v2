@@ -14,6 +14,9 @@ const actionCards = [
       'Discover our extensive collection of premium roses, lilies, carnations, and exotic flowers grown with care.',
     buttonText: 'View flower catalog',
     buttonVariant: 'outline' as const,
+    buttonAction: () => {
+      window.location.href = '#products';
+    },
   },
   {
     icon: Truck,
@@ -23,6 +26,13 @@ const actionCards = [
       'Partner with us for consistent, high-quality flower supplies. Competitive pricing for florists and retailers.',
     buttonText: 'Wholesale inquiry',
     buttonVariant: 'outline' as const,
+    buttonAction: () => {
+      const phoneNumber = '254722667154';
+      const message = encodeURIComponent(
+        'Hi Lamiflora, I would like to inquire about wholesale orders.'
+      );
+      window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+    },
   },
   {
     icon: Calendar,
@@ -32,6 +42,13 @@ const actionCards = [
       'Experience the beauty of our flower fields firsthand. Schedule a guided tour of our sustainable farm.',
     buttonText: 'Schedule visit',
     buttonVariant: 'outline' as const,
+    buttonAction: () => {
+      const phoneNumber = '254722667154';
+      const message = encodeURIComponent(
+        'Hi Lamiflora, I would like to schedule a visit to your farm.'
+      );
+      window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+    },
   },
 ];
 
@@ -96,7 +113,12 @@ export default function Hero() {
               <p className="text-gray-600 text-sm mb-4 leading-relaxed">
                 {card.description}
               </p>
-              <Button variant={card.buttonVariant} size="sm" className="group">
+              <Button
+                onClick={card.buttonAction}
+                variant={card.buttonVariant}
+                size="sm"
+                className="group"
+              >
                 {card.buttonText}
                 <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
               </Button>
