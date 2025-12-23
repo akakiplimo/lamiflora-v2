@@ -55,10 +55,10 @@ export default function Hero() {
           <span className="text-rose font-semibold tracking-wider uppercase text-sm">
             Cultivating beauty since 1995
           </span>
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-gray-700 mt-3 mb-4">
+          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-blue-700 mt-3 mb-4">
             Say it with Flowers
           </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto mb-8 text-lg">
+          <p className="text-blue-900 max-w-2xl mx-auto mb-8 text-lg">
             At Lamiflora, we cultivate the finest flowers using sustainable
             farming practices. From our fields to your arrangements, every bloom
             represents our commitment to quality, freshness, and environmental
@@ -69,7 +69,7 @@ export default function Hero() {
       </div>
 
       {/* Action Cards & Additional Content */}
-      <div className="container-custom py-16">
+      <div id="inquiries" className="container-custom py-16">
         {/* Action Cards */}
         <div className="grid md:grid-cols-3 gap-6 mb-16">
           {actionCards.map((card, index) => (

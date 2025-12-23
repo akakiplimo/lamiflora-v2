@@ -81,11 +81,11 @@ const socialLinks = [
 ];
 
 const certifications = [
-  'FPC Kenya',
-  'Sedex',
-  'AFFA',
-  'GlobalG.A.P.',
-  'Kenya Flower Council',
+  { name: 'FPC Kenya', logo: '/images/certifications/fpc.webp' },
+  { name: 'Sedex', logo: '/images/certifications/sedex.jpg' },
+  { name: 'AFFA', logo: '/images/certifications/afa.png' },
+  { name: 'GlobalG.A.P.', logo: '/images/certifications/globalgap.png' },
+  { name: 'Kenya Flower Council', logo: '/images/certifications/kfc.jpg' },
 ];
 
 export default function Footer() {
@@ -121,11 +121,11 @@ export default function Footer() {
             <div className="space-y-3 mb-6">
               <div className="flex items-center gap-3 text-black/70">
                 <MapPin className="w-4 h-4 text-peach flex-shrink-0" />
-                <span className="text-sm">Naivasha, Kenya</span>
+                <span className="text-sm">Nyandarua, Kenya</span>
               </div>
               <div className="flex items-center gap-3 text-black/70">
                 <Phone className="w-4 h-4 text-peach flex-shrink-0" />
-                <span className="text-sm">+254 (0) 722 123 456</span>
+                <span className="text-sm">+254 (0) 722 667 154</span>
               </div>
               <div className="flex items-center gap-3 text-black/70">
                 <Mail className="w-4 h-4 text-peach flex-shrink-0" />
@@ -176,14 +176,22 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-white/10">
           <div className="flex flex-wrap items-center gap-6">
             <span className="text-black/60 text-sm">Certifications:</span>
-            {certifications.map((cert) => (
-              <span
-                key={cert}
-                className="px-3 py-1 bg-white/10 rounded-full text-xs text-black/80"
-              >
-                {cert}
-              </span>
-            ))}
+            <div className="flex flex-wrap items-center gap-6">
+              {certifications.map((cert) => (
+                <div
+                  key={cert.name}
+                  className="relative w-20 lg:w-50 h-12 hover:opacity-100 transition-all"
+                  title={cert.name}
+                >
+                  <Image
+                    src={cert.logo}
+                    alt={cert.name}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

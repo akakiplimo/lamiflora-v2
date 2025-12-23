@@ -6,7 +6,7 @@ import { ArrowRight, Award, Heart, Leaf, Globe } from 'lucide-react';
 
 export default function About() {
   return (
-    <section className="relative py-20 overflow-hidden bg-cream">
+    <section id="about" className="relative py-20 overflow-hidden bg-cream">
       <div className="container-custom">
         <div className="relative bg-gradient-to-r from-white via-rose-50/30 to-white rounded-2xl overflow-hidden">
           {/* Decorative Flower Bouquet Visual */}

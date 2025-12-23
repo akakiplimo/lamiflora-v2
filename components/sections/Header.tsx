@@ -10,28 +10,28 @@ import { cn } from '@/lib/utils';
 
 const navItems = [
   {
-    label: 'Our Flowers',
-    href: '/flowers',
+    label: 'Farm Tours',
+    href: '#inquiries',
     hasDropdown: false,
   },
   {
-    label: 'Farm Tours',
-    href: '/tours',
+    label: 'Our Flowers',
+    href: '#products',
     hasDropdown: false,
   },
   {
     label: 'About Us',
-    href: '/about',
+    href: '#about',
     hasDropdown: false,
   },
   {
-    label: 'Sustainability',
-    href: '/sustainability',
+    label: 'Our Services',
+    href: '#services',
     hasDropdown: false,
   },
   {
     label: 'Contact',
-    href: '/contact',
+    href: '#contact',
   },
 ];
 
@@ -47,12 +47,32 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleWhatsAppClick = () => {
+    const phoneNumber = '254722667154';
+    const message = encodeURIComponent(
+      'Hi Lamiflora, I would like to request a quote for flowers.'
+    );
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+  };
+
+  const handleInquiryClick = () => {
+    const phoneNumber = '254722667154';
+    const message = encodeURIComponent(
+      'Hi Lamiflora, I would like to inquire about wholesale orders.'
+    );
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+  };
+
   return (
     <>
       {/* Top Banner */}
       <div className="bg-blue text-black text-center py-2 text-sm font-medium">
         <span>🌸 Fresh blooms delivered worldwide – </span>
-        <Link href="/wholesale" className="underline hover:no-underline">
+        <Link
+          href="#"
+          onClick={handleInquiryClick}
+          className="underline hover:no-underline"
+        >
           Wholesale Inquiries Welcome
         </Link>
       </div>
@@ -102,7 +122,7 @@ export default function Header() {
 
           {/* Actions */}
           <div className="hidden lg:flex items-center gap-4">
-            <Button variant="rose" size="sm">
+            <Button variant="rose" size="sm" onClick={handleWhatsAppClick}>
               Request Quote
             </Button>
           </div>
@@ -139,7 +159,11 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
-            <Button variant="rose" className="mt-4 w-full">
+            <Button
+              onClick={handleWhatsAppClick}
+              variant="rose"
+              className="mt-4 w-full"
+            >
               Request Quote
             </Button>
           </nav>

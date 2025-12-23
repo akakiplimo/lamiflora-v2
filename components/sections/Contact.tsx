@@ -7,7 +7,7 @@ import { Send, Phone, Mail, MapPin } from 'lucide-react';
 
 export default function Contact() {
   return (
-    <section className="relative py-20 overflow-hidden">
+    <section id="contact" className="relative py-20 overflow-hidden">
       {/* Background with flower field imagery */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-forest/95 via-forest/85 to-rose/70" />
@@ -88,7 +88,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-black/60 text-sm">Email us</p>
-                  <p className="text-black font-medium">sales@lamiflora.com</p>
+                  <p className="text-black font-medium">info@lamiflora.co.ke</p>
                 </div>
               </div>
 
@@ -98,7 +98,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-black/60 text-sm">Visit our farm</p>
-                  <p className="text-black font-medium">Naivasha, Kenya</p>
+                  <p className="text-black font-medium">Nyandarua, Kenya</p>
                 </div>
               </div>
             </div>
