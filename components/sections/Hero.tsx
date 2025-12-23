@@ -36,6 +36,9 @@ const actionCards = [
 ];
 
 export default function Hero() {
+  const navigateToCollection = () => {
+    window.location.href = '#products';
+  };
   return (
     <section className="relative overflow-hidden">
       {/* Full-Screen Main Headline Section */}
@@ -65,7 +68,9 @@ export default function Hero() {
             represents our commitment to quality, freshness, and environmental
             responsibility.
           </p>
-          <Button variant="rose">Explore Our Collection</Button>
+          <Button onClick={navigateToCollection} variant="rose">
+            Explore Our Collection
+          </Button>
         </div>
       </div>
 
