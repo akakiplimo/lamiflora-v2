@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Lamiflora Limited | Premium Flower Farm',
+  title: 'Lamiflora Limited | Kenyan Flower Farm',
   description:
     'Lamiflora Limited is a leading flower farm cultivating premium roses, lilies, carnations and exotic flowers. Sustainable farming practices, worldwide delivery, and exceptional quality since 1995.',
   keywords:
@@ -24,18 +24,18 @@ export const metadata: Metadata = {
     },
   ],
   openGraph: {
-    title: 'Lamiflora Limited | Premium Flower Farm',
+    title: 'Lamiflora Limited | Kenyan Flower Farm',
     description:
-      'Premium flowers grown with passion. From our fields in Kenya to destinations worldwide.',
+      'Kenyan flowers grown with passion. From our fields in Kenya to destinations worldwide.',
     type: 'website',
     locale: 'en_US',
     siteName: 'Lamiflora Limited',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Lamiflora Limited | Premium Flower Farm',
+    title: 'Lamiflora Limited | Kenyan Flower Farm',
     description:
-      'Premium flowers grown with passion. From our fields in Kenya to destinations worldwide.',
+      'Kenyan flowers grown with passion. From our fields in Kenya to destinations worldwide.',
   },
 };
 
