@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Flower2, Truck, Calendar } from 'lucide-react';
 
@@ -100,8 +101,16 @@ export default function Hero() {
 
         {/* Why Choose Us Cards */}
         <div className="grid md:grid-cols-2 gap-8 mt-16">
-          {/* Our Promise Card */}
-          <div className="bg-white rounded-lg overflow-hidden shadow-soft hover:shadow-medium transition-all duration-300 border-l-4 border-rose">
+          {/* Our Promise Card with Image */}
+          <div className="grid md:grid-cols-2 gap-6 bg-white rounded-lg overflow-hidden shadow-soft hover:shadow-medium transition-all duration-300 border-l-4 border-rose">
+            <div className="relative h-64 md:h-auto">
+              <Image
+                src="/images/promise.jpeg"
+                alt="Lamiflora Farm - Quality Promise"
+                fill
+                className="object-cover"
+              />
+            </div>
             <div className="p-8">
               <h3 className="font-heading text-2xl font-bold text-forest mb-4">
                 Our promise
@@ -115,8 +124,16 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* What We Offer Card */}
-          <div className="bg-white rounded-lg overflow-hidden shadow-soft hover:shadow-medium transition-all duration-300 border-l-4 border-forest">
+          {/* What We Offer Card with Image */}
+          <div className="grid md:grid-cols-2 gap-6 bg-white rounded-lg overflow-hidden shadow-soft hover:shadow-medium transition-all duration-300 border-l-4 border-forest">
+            <div className="relative h-64 md:h-auto">
+              <Image
+                src="/images/offer.jpeg"
+                alt="Lamiflora Farm - Flower Varieties"
+                fill
+                className="object-cover"
+              />
+            </div>
             <div className="p-8">
               <h3 className="font-heading text-2xl font-bold text-forest mb-4">
                 What we offer
