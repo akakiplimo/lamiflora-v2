@@ -67,16 +67,6 @@ const flowers = [
     color: '#F5F5DC',
   },
   {
-    name: 'Roses',
-    scientificName: 'Rosa',
-    description:
-      'Classic and timeless blooms available in a wide range of colors, symbolizing love and beauty.',
-    image: '/images/flowers/roses.jpg',
-    sizes: ['42cm', '52cm', '62cm', '72cm'],
-    category: 'Cut Flower',
-    color: '#E24563',
-  },
-  {
     name: 'Arabicum Sundersia',
     scientificName: 'Arabicum Sundersia',
     description:
@@ -294,7 +284,7 @@ export default function Products() {
           </span>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mt-3">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-forest max-w-2xl">
-              Varieties from our farm
+              Our Products
             </h2>
             <Button variant="outline" className="group w-fit">
               Download Full Catalog
@@ -487,11 +477,11 @@ export default function Products() {
                 <div className="absolute inset-0 bg-gradient-to-t from-forest/80 via-forest/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                 {/* Category Badge */}
-                <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full">
+                {/* <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full">
                   <span className="text-xs font-semibold text-forest">
                     {flower.category}
                   </span>
-                </div>
+                </div> */}
 
                 {/* Hover Content */}
                 <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
@@ -506,9 +496,6 @@ export default function Products() {
                 <h3 className="font-heading text-lg font-semibold text-forest group-hover:text-rose transition-colors">
                   {flower.name}
                 </h3>
-                <p className="text-sm text-gray-500 italic mb-2">
-                  {flower.scientificName}
-                </p>
 
                 {/* Size Tags */}
                 <div className="flex flex-wrap gap-1">
@@ -633,9 +620,6 @@ export default function Products() {
               <h3 className="font-heading text-3xl font-bold text-forest mt-2">
                 {selectedFlower.name}
               </h3>
-              <p className="text-gray-500 italic mb-4">
-                {selectedFlower.scientificName}
-              </p>
 
               <p className="text-gray-600 leading-relaxed mb-6">
                 {selectedFlower.description}

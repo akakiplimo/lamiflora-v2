@@ -98,7 +98,7 @@ export default function Header() {
                 LAMIFLORA
               </span>
               <span className="text-xs text-gray-500 tracking-widest uppercase">
-                Kenyan Flower Farm
+                LIMITED
               </span>
             </div>
           </Link>

@@ -60,21 +60,31 @@ export default function Hero() {
     <section className="relative overflow-hidden">
       {/* Full-Screen Main Headline Section */}
       <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image Layer */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url(/images/hero-background.png)',
-          }}
-        />
+        {/* Gradient Background Layers */}
+        <div className="absolute inset-0">
+          {/* Base gradient: blue to green */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-green-50 to-yellow-50" />
 
-        {/* Dark Overlay */}
-        {/* <div className="absolute inset-0 bg-black/40" /> */}
+          {/* Accent gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-blue-100/30 via-transparent to-yellow-100/30" />
+
+          {/* Radial gradient for depth */}
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-green-100/40 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-blue-100/40 via-transparent to-transparent" />
+
+          {/* Subtle pattern overlay */}
+          <div
+            className="absolute inset-0 opacity-[0.03]"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23047857' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            }}
+          />
+        </div>
 
         {/* Content */}
         <div className="container-custom relative z-10 text-center">
           <span className="text-rose font-semibold tracking-wider uppercase text-sm">
-            Cultivating beauty since 1995
+            Cultivating beauty since 2019
           </span>
           <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-blue-700 mt-3 mb-4">
             Say it with Flowers
@@ -92,7 +102,10 @@ export default function Hero() {
       </div>
 
       {/* Action Cards & Additional Content */}
-      <div id="inquiries" className="container-custom py-16">
+      <div
+        id="inquiries"
+        className="container-custom py-16 bg-gradient-to-b from-yellow-50/30 to-white"
+      >
         {/* Action Cards */}
         <div className="grid md:grid-cols-3 gap-6 mb-16">
           {actionCards.map((card, index) => (
