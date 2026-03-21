@@ -216,6 +216,26 @@ const flowers = [
     category: 'Accent',
     color: '#E24563',
   },
+  {
+    name: 'Dried Craspedia',
+    scientificName: 'Craspedia globosa',
+    description:
+      'Expertly dried golden drumstick flowers that retain their vibrant color and shape for long-lasting floral displays.',
+    image: '/images/flowers/craspedia.jpg',
+    sizes: ['42cm', '52cm', '62cm'],
+    category: 'Dried Flower',
+    color: '#D4A84B',
+  },
+  {
+    name: 'Dried Grasses',
+    scientificName: 'Various species',
+    description:
+      'A curated selection of ornamental grasses, carefully dried to preserve their natural beauty and texture.',
+    image: '/images/flowers/dried-grasses.jpg',
+    sizes: ['42cm', '52cm', '62cm', '72cm'],
+    category: 'Dried Flower',
+    color: '#C4A87B',
+  },
 ];
 
 const categories = [
@@ -225,6 +245,7 @@ const categories = [
   'Filler',
   'Accent',
   'Thistle',
+  'Dried Flower',
 ];
 
 export default function Products() {
@@ -283,9 +304,14 @@ export default function Products() {
             Our flower collection
           </span>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mt-3">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-forest max-w-2xl">
-              Our Products
-            </h2>
+            <div>
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-forest max-w-2xl">
+                Our Products
+              </h2>
+              <p className="text-gray-600 mt-2 max-w-2xl">
+                Featuring Eryngium, Bupleurum, Eucalyptus, Roses, dried flowers, and custom bouquets and mixes.
+              </p>
+            </div>
             <Button variant="outline" className="group w-fit">
               Download Full Catalog
               <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />

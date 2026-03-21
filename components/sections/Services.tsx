@@ -7,37 +7,37 @@ import { ArrowRight, Flower, Package, Truck, Sparkles } from 'lucide-react';
 const services = [
   {
     icon: Flower,
-    title: 'We grow premium flowers with exceptional care and expertise',
+    title: 'Premium Fresh-Cut Flowers',
     description:
-      'From seed to stem, our expert horticulturists nurture each flower variety to achieve optimal color, size, and vase life.',
+      'We grow world-class summer flowers on our farms in Central Kenya, including Eryngium, Craspedia, Ammi Visnaga, Bupleurum, Alstroemeria, and Eucalyptus varieties.',
     buttonText: 'Our Varieties',
     color: 'text-rose',
     bgColor: 'bg-rose/10',
   },
   {
     icon: Package,
-    title: 'We package with precision to ensure freshness on arrival',
+    title: 'High Grade Dried Flowers',
     description:
-      'Our state-of-the-art packing facilities use cold chain technology to maintain peak freshness during transit.',
-    buttonText: 'Quality Assurance',
+      'We specialize in expertly dried floral products including Craspedia and ornamental grasses, preserved to maintain their beauty and quality.',
+    buttonText: 'View Dried Flowers',
     color: 'text-forest',
     bgColor: 'bg-forest/10',
   },
   {
-    icon: Truck,
-    title: 'We deliver worldwide with reliable logistics partners',
+    icon: Sparkles,
+    title: 'Custom Bouquets & Floral Mixes',
     description:
-      'Direct flights and trusted shipping partners ensure your flowers arrive fresh, on time, every time.',
-    buttonText: 'Shipping Info',
+      'We add value by creating customized bouquets, mixed flower packs, and special-order floral arrangements tailored to your specific needs.',
+    buttonText: 'Custom Orders',
     color: 'text-lavender',
     bgColor: 'bg-lavender/10',
   },
   {
-    icon: Sparkles,
-    title: 'We create custom solutions for every floral need',
+    icon: Truck,
+    title: 'Global Wholesale Export',
     description:
-      'From weddings to corporate events, we offer bespoke growing programs tailored to your specific requirements.',
-    buttonText: 'Custom Orders',
+      'As wholesale exporters, we serve markets across Africa, the UK, Europe, Australia, Singapore, and the Middle East with reliable supply year round.',
+    buttonText: 'Export Inquiry',
     color: 'text-gold-600',
     bgColor: 'bg-gold/10',
   },
@@ -52,7 +52,7 @@ export default function Services() {
             From our farm to your world
           </span>
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-forest mt-3">
-            How we serve you
+            What We Offer
           </h2>
         </div>
 

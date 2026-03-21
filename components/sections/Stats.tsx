@@ -126,10 +126,14 @@ export default function Stats() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <span className="text-rose font-semibold tracking-wider uppercase text-sm">
-              Growing excellence,
+              Our Market
               <br />
-              <span className="text-forest">Delivering beauty</span>
+              <span className="text-forest">Growing excellence, delivering worldwide</span>
             </span>
+            <p className="text-gray-600 mt-3 max-w-2xl mx-auto text-sm">
+              As wholesale exporters, we serve markets across Africa, the UK, Europe,
+              Australia, Singapore, and the Middle East.
+            </p>
           </div>
 
           {/* Stats Grid - White background box */}

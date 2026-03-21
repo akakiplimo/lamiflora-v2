@@ -21,12 +21,12 @@ const footerLinks = {
   flowers: {
     title: 'Our Flowers',
     links: [
-      { label: 'Roses', href: '/flowers/roses' },
-      { label: 'Lilies', href: '/flowers/lilies' },
-      { label: 'Carnations', href: '/flowers/carnations' },
-      { label: 'Chrysanthemums', href: '/flowers/chrysanthemums' },
-      { label: 'Exotic Varieties', href: '/flowers/exotic' },
-      { label: 'Seasonal Blooms', href: '/flowers/seasonal' },
+      { label: 'Eryngium', href: '#products' },
+      { label: 'Craspedia', href: '#products' },
+      { label: 'Alstroemeria', href: '#products' },
+      { label: 'Eucalyptus', href: '#products' },
+      { label: 'Bupleurum', href: '#products' },
+      { label: 'Dried Flowers', href: '#products' },
     ],
   },
   company: {
@@ -43,12 +43,12 @@ const footerLinks = {
   services: {
     title: 'Services',
     links: [
-      { label: 'Wholesale Orders', href: '/wholesale' },
-      { label: 'Retail Partners', href: '/retail' },
-      { label: 'Event Flowers', href: '/events' },
-      { label: 'Custom Growing', href: '/custom' },
-      { label: 'Farm Tours', href: '/tours' },
-      { label: 'Shipping Info', href: '/shipping' },
+      { label: 'Fresh Cut Flowers', href: '#services' },
+      { label: 'Dried Flowers', href: '#services' },
+      { label: 'Custom Bouquets', href: '#services' },
+      { label: 'Wholesale Export', href: '#services' },
+      { label: 'Mixed Flower Packs', href: '#services' },
+      { label: 'Special Orders', href: '#services' },
     ],
   },
   resources: {
@@ -112,9 +112,10 @@ export default function Footer() {
             </Link>
 
             <p className="text-black/70 mb-6 leading-relaxed">
-              A flower farm cultivating beauty and sustainability since 1995.
-              From our fields in Kenya to destinations worldwide, we deliver
-              excellence in every bloom.
+              A vertically integrated grower and consolidator specializing in
+              premium fresh cut flowers, high grade dried flowers, and creative
+              custom bouquets and floral mixes. From our farms in Central Kenya
+              to destinations worldwide.
             </p>
 
             {/* Contact Info */}
