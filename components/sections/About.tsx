@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Award, Heart, Leaf, Globe } from 'lucide-react';
+import { ArrowRight, Award, Heart, Leaf, Globe, Eye, Target, Star, Lightbulb, Users } from 'lucide-react';
 
 export default function About() {
   return (
@@ -89,66 +89,93 @@ export default function About() {
                 Who we are
               </span>
               <h2 className="font-heading text-3xl md:text-4xl font-bold text-forest mt-3 mb-6">
-                A leading flower farm committed to excellence and sustainability
+                A vertically integrated grower and consolidator of premium flowers
               </h2>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Nestled in the highlands with perfect growing conditions,
-                Lamiflora has been cultivating premium flowers for nearly three
-                decades. Our farms span over 500 hectares of carefully managed
-                land where nature and innovation work hand in hand.
+                We specialize in growing summer flowers, with our farms located
+                in Central Kenya at the foot of the Aberdare Ranges and another
+                unit in the Mt Kenya region. These regions offer ideal climates
+                for cultivating a wide range of flowers with our main varieties
+                being Eryngium, Craspedia, Ammi Visnaga, Bupleurum Graffiti,
+                Alstroemeria, and Eucalyptus (E. Parviflora, Cinerea/Silver
+                Dollar, and Baby Blue).
               </p>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                We combine traditional horticultural expertise with modern
-                sustainable practices to produce flowers that are not only
-                beautiful but also environmentally responsible. Every bloom
-                tells a story of dedication, care, and respect for our planet.
+                We also specialize in dried cut flowers. In addition to our own
+                production, we have strong partnerships with leading flower farms,
+                enabling us to source and supply our customers with premium
+                flowers that we don&apos;t grow ourselves according to their needs.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button variant="default" className="group">
-                  Our Story
+                <Button
+                  variant="default"
+                  className="group"
+                  onClick={() => {
+                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
+                  Get In Touch
                   <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                 </Button>
               </div>
             </div>
 
-            {/* Right Content - Quote Box */}
-            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-soft">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-16 h-16 rounded-full bg-rose-100 flex items-center justify-center flex-shrink-0">
-                  <Heart className="w-8 h-8 text-rose" />
+            {/* Right Content - Vision, Mission & Values */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-soft space-y-6">
+              {/* Vision */}
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-full bg-forest/10 flex items-center justify-center flex-shrink-0">
+                  <Eye className="w-6 h-6 text-forest" />
                 </div>
                 <div>
-                  <p className="text-forest italic text-lg leading-relaxed font-accent">
-                    "We believe that every flower we grow carries a piece of our
-                    heart. Our mission is to bring joy and beauty to homes
-                    around the world while nurturing the land that makes it all
-                    possible."
-                  </p>
-                  <p className="text-sm text-gray-500 mt-3">
-                    — The Lamiflora Family
+                  <h4 className="font-heading font-bold text-forest mb-1">Our Vision</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    To be a globally recognized supplier of premium fresh-cut
+                    flowers known for quality, reliability, and exceptional
+                    customer service.
                   </p>
                 </div>
               </div>
 
-              {/* Trust indicators */}
-              <div className="grid grid-cols-3 gap-4 pt-6 border-t border-gray-200">
-                <div className="text-center">
-                  <div className="w-10 h-10 mx-auto mb-2 rounded-full bg-forest/10 flex items-center justify-center">
-                    <Globe className="w-5 h-5 text-forest" />
-                  </div>
-                  <span className="text-xs text-gray-600">Global Export</span>
+              {/* Mission */}
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-full bg-rose/10 flex items-center justify-center flex-shrink-0">
+                  <Target className="w-6 h-6 text-rose" />
                 </div>
-                <div className="text-center">
-                  <div className="w-10 h-10 mx-auto mb-2 rounded-full bg-forest/10 flex items-center justify-center">
-                    <Award className="w-5 h-5 text-forest" />
-                  </div>
-                  <span className="text-xs text-gray-600">Certified</span>
+                <div>
+                  <h4 className="font-heading font-bold text-forest mb-1">Our Mission</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    To consistently produce and export high-quality flowers while
+                    supporting sustainable agriculture, empowering growers, and
+                    delivering value to our customers worldwide.
+                  </p>
                 </div>
-                <div className="text-center">
-                  <div className="w-10 h-10 mx-auto mb-2 rounded-full bg-forest/10 flex items-center justify-center">
-                    <Leaf className="w-5 h-5 text-forest" />
+              </div>
+
+              {/* Core Values */}
+              <div className="pt-4 border-t border-gray-200">
+                <h4 className="font-heading font-bold text-forest mb-3">Core Values</h4>
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="flex items-center gap-2">
+                    <Star className="w-4 h-4 text-gold-600 flex-shrink-0" />
+                    <span className="text-xs text-gray-600"><span className="font-semibold">Quality</span> — Excellence from farm to client</span>
                   </div>
-                  <span className="text-xs text-gray-600">Sustainable</span>
+                  <div className="flex items-center gap-2">
+                    <Heart className="w-4 h-4 text-rose flex-shrink-0" />
+                    <span className="text-xs text-gray-600"><span className="font-semibold">Integrity</span> — Transparent practices</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Leaf className="w-4 h-4 text-forest flex-shrink-0" />
+                    <span className="text-xs text-gray-600"><span className="font-semibold">Sustainability</span> — Responsible farming</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Lightbulb className="w-4 h-4 text-gold-600 flex-shrink-0" />
+                    <span className="text-xs text-gray-600"><span className="font-semibold">Innovation</span> — Modern methods</span>
+                  </div>
+                  <div className="flex items-center gap-2 col-span-2">
+                    <Users className="w-4 h-4 text-lavender flex-shrink-0" />
+                    <span className="text-xs text-gray-600"><span className="font-semibold">Customer Focus</span> — Tailored solutions and dependable service</span>
+                  </div>
                 </div>
               </div>
             </div>

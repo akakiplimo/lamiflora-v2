@@ -3,15 +3,15 @@
 import React from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Flower2, Truck, Calendar } from 'lucide-react';
+import { ArrowRight, Flower2, Truck, Calendar, CheckCircle2, Snowflake, DollarSign, Package, Clock, Scissors, Handshake, Globe } from 'lucide-react';
 
 const actionCards = [
   {
     icon: Flower2,
-    label: 'EXPLORE VARIETIES',
-    title: 'Browse our blooms',
+    label: 'EXPLORE FRESH FLOWERS',
+    title: 'Explore Fresh Flowers',
     description:
-      'Discover our extensive collection of premium roses, lilies, carnations, and exotic flowers grown with care.',
+      'Discover our collection of premium fresh-cut flowers including Eryngium, Craspedia, Alstroemeria, Eucalyptus, and more.',
     buttonText: 'View flower catalog',
     buttonVariant: 'outline' as const,
     buttonAction: () => {
@@ -20,32 +20,32 @@ const actionCards = [
   },
   {
     icon: Truck,
-    label: 'WHOLESALE ORDERS',
-    title: 'Bulk purchasing',
+    label: 'EXPORT CATALOGUE',
+    title: 'View Export Catalogue',
     description:
-      'Partner with us for consistent, high-quality flower supplies. Competitive pricing for florists and retailers.',
-    buttonText: 'Wholesale inquiry',
+      'As wholesale exporters, we serve markets across Africa, the UK, Europe, Australia, Singapore, and the Middle East.',
+    buttonText: 'Download catalogue',
     buttonVariant: 'outline' as const,
     buttonAction: () => {
       const phoneNumber = '254722667154';
       const message = encodeURIComponent(
-        'Hi Lamiflora, I would like to inquire about wholesale orders.'
+        'Hi Lamiflora, I would like to request your export catalogue.'
       );
       window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
     },
   },
   {
     icon: Calendar,
-    label: 'VISIT OUR FARM',
-    title: 'Book a farm tour',
+    label: 'CUSTOM BOUQUETS',
+    title: 'Customize Your Bouquet',
     description:
-      'Experience the beauty of our flower fields firsthand. Schedule a guided tour of our sustainable farm.',
-    buttonText: 'Schedule visit',
+      'We create customized bouquets, mixed flower packs, and special-order floral arrangements tailored to your needs.',
+    buttonText: 'Request custom order',
     buttonVariant: 'outline' as const,
     buttonAction: () => {
       const phoneNumber = '254722667154';
       const message = encodeURIComponent(
-        'Hi Lamiflora, I would like to schedule a visit to your farm.'
+        'Hi Lamiflora, I would like to customize a bouquet order.'
       );
       window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
     },
@@ -84,16 +84,17 @@ export default function Hero() {
         {/* Content */}
         <div className="container-custom relative z-10 text-center">
           <span className="text-rose font-semibold tracking-wider uppercase text-sm">
-            Cultivating beauty since 2019
+            Premium fresh cut flowers from Kenya
           </span>
           <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-blue-700 mt-3 mb-4">
-            Say it with Flowers
+            Home of Premium Fresh Cut Flowers
           </h2>
           <p className="text-blue-900 max-w-2xl mx-auto mb-8 text-lg">
-            At Lamiflora, we cultivate the finest flowers using sustainable
-            farming practices. From our fields to your arrangements, every bloom
-            represents our commitment to quality, freshness, and environmental
-            responsibility.
+            LAMIFLORA LIMITED produces world-class fresh-cut flowers, expertly
+            dried floral products, and customized bouquets for clients across the
+            globe. A vertically integrated grower and consolidator specializing
+            in premium fresh cut flowers, high grade dried flowers, and creative
+            custom bouquets and floral mixes.
           </p>
           <Button onClick={navigateToCollection} variant="rose">
             Explore Our Collection
@@ -139,71 +140,99 @@ export default function Hero() {
           ))}
         </div>
 
-        {/* Why Choose Us Cards */}
+        {/* Why Choose Us & What We Offer */}
         <div className="grid md:grid-cols-2 gap-8 mt-16">
-          {/* Our Promise Card with Image */}
-          <div className="grid md:grid-cols-2 gap-6 bg-white rounded-lg overflow-hidden shadow-soft hover:shadow-medium transition-all duration-300 border-l-4 border-rose">
-            <div className="relative h-64 md:h-auto">
+          {/* Why Choose Us */}
+          <div className="bg-white rounded-xl overflow-hidden shadow-soft hover:shadow-medium transition-all duration-300">
+            <div className="relative h-48">
               <Image
                 src="/images/promise.jpeg"
                 alt="Lamiflora Farm - Quality Promise"
                 fill
                 className="object-cover"
               />
-            </div>
-            <div className="p-8">
-              <h3 className="font-heading text-2xl font-bold text-forest mb-4">
-                Our promise
+              <div className="absolute inset-0 bg-gradient-to-t from-forest/80 to-transparent" />
+              <h3 className="absolute bottom-4 left-6 font-heading text-2xl font-bold text-white">
+                Why Choose Us
               </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Every flower that leaves our farm meets the highest standards of
-                quality. We hand-select each stem, ensuring only the freshest,
-                most vibrant blooms reach our customers. Our cold chain
-                logistics guarantee your flowers arrive in perfect condition.
-              </p>
+            </div>
+            <div className="p-6">
+              <div className="space-y-1">
+                <div className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-green-50 transition-colors">
+                  <div className="w-9 h-9 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0">
+                    <CheckCircle2 className="w-[18px] h-[18px] text-green-700" />
+                  </div>
+                  <span className="text-gray-700 text-sm font-medium">Reliable supply all year round</span>
+                </div>
+                <div className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-blue-50 transition-colors">
+                  <div className="w-9 h-9 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0">
+                    <Snowflake className="w-[18px] h-[18px] text-blue-700" />
+                  </div>
+                  <span className="text-gray-700 text-sm font-medium">Strict post-harvest and cold-chain management</span>
+                </div>
+                <div className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-amber-50 transition-colors">
+                  <div className="w-9 h-9 rounded-lg bg-amber-100 flex items-center justify-center flex-shrink-0">
+                    <DollarSign className="w-[18px] h-[18px] text-amber-700" />
+                  </div>
+                  <span className="text-gray-700 text-sm font-medium">Competitive pricing</span>
+                </div>
+                <div className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-purple-50 transition-colors">
+                  <div className="w-9 h-9 rounded-lg bg-purple-100 flex items-center justify-center flex-shrink-0">
+                    <Package className="w-[18px] h-[18px] text-purple-700" />
+                  </div>
+                  <span className="text-gray-700 text-sm font-medium">Custom packaging options</span>
+                </div>
+                <div className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-rose-50 transition-colors">
+                  <div className="w-9 h-9 rounded-lg bg-rose-100 flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-[18px] h-[18px] text-rose-700" />
+                  </div>
+                  <span className="text-gray-700 text-sm font-medium">Timely global delivery</span>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* What We Offer Card with Image */}
-          <div className="grid md:grid-cols-2 gap-6 bg-white rounded-lg overflow-hidden shadow-soft hover:shadow-medium transition-all duration-300 border-l-4 border-forest">
-            <div className="relative h-64 md:h-auto">
+          {/* What We Offer */}
+          <div className="bg-white rounded-xl overflow-hidden shadow-soft hover:shadow-medium transition-all duration-300">
+            <div className="relative h-48">
               <Image
                 src="/images/offer.jpeg"
                 alt="Lamiflora Farm - Flower Varieties"
                 fill
                 className="object-cover"
               />
-            </div>
-            <div className="p-8">
-              <h3 className="font-heading text-2xl font-bold text-forest mb-4">
-                What we offer
+              <div className="absolute inset-0 bg-gradient-to-t from-forest/80 to-transparent" />
+              <h3 className="absolute bottom-4 left-6 font-heading text-2xl font-bold text-white">
+                What We Offer
               </h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <span className="w-2 h-2 bg-rose rounded-full mt-2 flex-shrink-0" />
-                  <span className="text-gray-600">
-                    Over 50 varieties of premium cut flowers
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-2 h-2 bg-rose rounded-full mt-2 flex-shrink-0" />
-                  <span className="text-gray-600">
-                    Year-round availability with consistent supply
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-2 h-2 bg-rose rounded-full mt-2 flex-shrink-0" />
-                  <span className="text-gray-600">
-                    Sustainable and eco-friendly farming practices
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-2 h-2 bg-rose rounded-full mt-2 flex-shrink-0" />
-                  <span className="text-gray-600">
-                    Direct farm-to-customer delivery worldwide
-                  </span>
-                </li>
-              </ul>
+            </div>
+            <div className="p-6">
+              <div className="space-y-1">
+                <div className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-rose-50 transition-colors">
+                  <div className="w-9 h-9 rounded-lg bg-rose-100 flex items-center justify-center flex-shrink-0">
+                    <Flower2 className="w-[18px] h-[18px] text-rose-700" />
+                  </div>
+                  <span className="text-gray-700 text-sm font-medium">Premium fresh-cut flowers and dried floral products</span>
+                </div>
+                <div className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-green-50 transition-colors">
+                  <div className="w-9 h-9 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0">
+                    <Scissors className="w-[18px] h-[18px] text-green-700" />
+                  </div>
+                  <span className="text-gray-700 text-sm font-medium">Customized bouquets, mixed flower packs, and special-order arrangements</span>
+                </div>
+                <div className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-purple-50 transition-colors">
+                  <div className="w-9 h-9 rounded-lg bg-purple-100 flex items-center justify-center flex-shrink-0">
+                    <Handshake className="w-[18px] h-[18px] text-purple-700" />
+                  </div>
+                  <span className="text-gray-700 text-sm font-medium">Strong grower partnerships for sourcing flowers we don&apos;t grow</span>
+                </div>
+                <div className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-blue-50 transition-colors">
+                  <div className="w-9 h-9 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0">
+                    <Globe className="w-[18px] h-[18px] text-blue-700" />
+                  </div>
+                  <span className="text-gray-700 text-sm font-medium">Exports to Africa, UK, Europe, Australia, Singapore, and the Middle East</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
