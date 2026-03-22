@@ -98,17 +98,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 relative">
-                <Image src={logo} width={50} height={50} alt="Lamiflora Logo" />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-heading text-xl font-bold text-forest leading-tight">
-                  LAMIFLORA
-                </span>
-                <span className="text-xs text-black/60 tracking-widest uppercase">
-                  Limited
-                </span>
-              </div>
+              <Image src={logo} width={120} height={50} alt="Lamiflora Logo" />
             </Link>
 
             <p className="text-black/70 mb-6 leading-relaxed">
