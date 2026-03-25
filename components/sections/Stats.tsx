@@ -4,27 +4,27 @@ import React, { useEffect, useRef, useState } from 'react';
 
 const stats = [
   {
-    value: '50+',
+    value: '30+',
     label: 'Flower varieties cultivated',
     suffix: '',
   },
   {
-    value: '500',
+    value: '50',
     label: 'Hectares of farmland',
     suffix: '+',
   },
   {
-    value: '30',
+    value: '10',
     label: 'Years of excellence',
     suffix: '+',
   },
   {
-    value: '40',
+    value: '10',
     label: 'Countries served worldwide',
     suffix: '+',
   },
   {
-    value: '2M',
+    value: '1M',
     label: 'Stems shipped monthly',
     suffix: '+',
   },
@@ -48,7 +48,7 @@ function AnimatedCounter({
           setIsVisible(true);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
 
     if (ref.current) {
@@ -128,11 +128,13 @@ export default function Stats() {
             <span className="text-rose font-semibold tracking-wider uppercase text-sm">
               Our Market
               <br />
-              <span className="text-forest">Growing excellence, delivering worldwide</span>
+              <span className="text-forest">
+                Growing excellence, delivering worldwide
+              </span>
             </span>
             <p className="text-gray-600 mt-3 max-w-2xl mx-auto text-sm">
-              As wholesale exporters, we serve markets across Africa, the UK, Europe,
-              Australia, Singapore, and the Middle East.
+              As wholesale exporters, we serve markets across Africa, the UK,
+              Europe, Australia, Singapore, and the Middle East.
             </p>
           </div>
 
