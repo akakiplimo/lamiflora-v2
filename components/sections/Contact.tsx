@@ -78,7 +78,9 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-black/60 text-sm">Call us</p>
-                  <p className="text-black font-medium">+254 (0) 722 123 456</p>
+                  <p className="text-black font-medium">
+                    <a href="tel:+254722667154">+254 722 667 154</a>
+                  </p>
                 </div>
               </div>
 
