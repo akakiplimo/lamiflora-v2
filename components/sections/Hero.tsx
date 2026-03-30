@@ -60,45 +60,81 @@ export default function Hero() {
     <section className="relative overflow-hidden">
       {/* Full-Screen Main Headline Section */}
       <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Gradient Background Layers */}
+        {/* Vibrant Background */}
         <div className="absolute inset-0">
-          {/* Base gradient: blue to green */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-green-50 to-yellow-50" />
+          <div className="absolute inset-0 bg-gradient-to-br from-rose-100 via-pink-50 to-amber-50" />
+          <div className="absolute inset-0 bg-gradient-to-tl from-fuchsia-100/60 via-transparent to-emerald-50/40" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,_rgba(244,63,94,0.15)_0%,transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,_rgba(168,85,247,0.12)_0%,transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_20%,_rgba(251,191,36,0.1)_0%,transparent_40%)]" />
+        </div>
 
-          {/* Accent gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-blue-100/30 via-transparent to-yellow-100/30" />
+        {/* Floating Flower Images */}
+        <div className="absolute inset-0 pointer-events-none">
+          {/* Top-left flower */}
+          <div className="absolute -top-4 -left-8 w-48 h-48 md:w-64 md:h-64 opacity-30 animate-[float_8s_ease-in-out_infinite]">
+            <Image src="/images/flowers/roses.jpg" alt="" fill className="object-cover rounded-full" />
+          </div>
+          {/* Top-right flower */}
+          <div className="absolute top-16 -right-6 w-40 h-40 md:w-56 md:h-56 opacity-25 animate-[float_10s_ease-in-out_infinite_1s]">
+            <Image src="/images/flowers/craspedia.jpg" alt="" fill className="object-cover rounded-full" />
+          </div>
+          {/* Bottom-left flower */}
+          <div className="absolute bottom-24 -left-4 w-36 h-36 md:w-48 md:h-48 opacity-25 animate-[float_9s_ease-in-out_infinite_2s]">
+            <Image src="/images/flowers/alstromeria-purple.jpg" alt="" fill className="object-cover rounded-full" />
+          </div>
+          {/* Bottom-right flower */}
+          <div className="absolute bottom-8 right-8 w-44 h-44 md:w-60 md:h-60 opacity-20 animate-[float_11s_ease-in-out_infinite_0.5s]">
+            <Image src="/images/flowers/eryngium.jpg" alt="" fill className="object-cover rounded-full" />
+          </div>
+          {/* Center-left accent */}
+          <div className="absolute top-1/3 left-[8%] w-28 h-28 md:w-36 md:h-36 opacity-20 animate-[float_7s_ease-in-out_infinite_3s]">
+            <Image src="/images/flowers/alstromeria-pink.jpg" alt="" fill className="object-cover rounded-full" />
+          </div>
+          {/* Center-right accent */}
+          <div className="absolute top-1/2 right-[6%] w-32 h-32 md:w-40 md:h-40 opacity-20 animate-[float_8.5s_ease-in-out_infinite_1.5s]">
+            <Image src="/images/flowers/hypericum.jpg" alt="" fill className="object-cover rounded-full" />
+          </div>
+        </div>
 
-          {/* Radial gradient for depth */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-green-100/40 via-transparent to-transparent" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-blue-100/40 via-transparent to-transparent" />
-
-          {/* Subtle pattern overlay */}
-          <div
-            className="absolute inset-0 opacity-[0.03]"
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23047857' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-            }}
-          />
+        {/* Animated Petal Shapes */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="absolute top-[15%] left-[15%] w-5 h-5 bg-rose-300/40 rounded-full animate-[petal_6s_ease-in-out_infinite]" />
+          <div className="absolute top-[25%] right-[20%] w-3 h-3 bg-pink-400/30 rounded-full animate-[petal_8s_ease-in-out_infinite_1s]" />
+          <div className="absolute top-[60%] left-[25%] w-4 h-4 bg-amber-300/40 rounded-full animate-[petal_7s_ease-in-out_infinite_2s]" />
+          <div className="absolute top-[70%] right-[30%] w-3 h-3 bg-fuchsia-300/30 rounded-full animate-[petal_9s_ease-in-out_infinite_0.5s]" />
+          <div className="absolute top-[40%] left-[60%] w-4 h-4 bg-purple-300/30 rounded-full animate-[petal_7.5s_ease-in-out_infinite_3s]" />
+          <div className="absolute top-[80%] left-[50%] w-3 h-3 bg-rose-200/40 rounded-full animate-[petal_6.5s_ease-in-out_infinite_1.5s]" />
+          <div className="absolute top-[10%] left-[45%] w-2 h-2 bg-pink-300/50 rounded-full animate-[petal_5s_ease-in-out_infinite_2.5s]" />
+          <div className="absolute top-[50%] right-[15%] w-3 h-3 bg-amber-400/30 rounded-full animate-[petal_8.5s_ease-in-out_infinite_4s]" />
         </div>
 
         {/* Content */}
         <div className="container-custom relative z-10 text-center">
-          <span className="text-rose font-semibold tracking-wider uppercase text-sm">
+          <span className="inline-block bg-white/70 backdrop-blur-sm text-rose-600 font-semibold tracking-wider uppercase text-sm px-4 py-1.5 rounded-full border border-rose-200/50 animate-[fadeInUp_0.8s_ease-out]">
             Premium fresh cut flowers from Kenya
           </span>
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-blue-700 mt-3 mb-4">
-            Home of Premium Fresh Cut Flowers
+          <h2 className="font-heading text-4xl md:text-5xl lg:text-7xl font-bold mt-5 mb-6 animate-[fadeInUp_0.8s_ease-out_0.2s_both]">
+            <span className="bg-gradient-to-r from-rose-600 via-pink-600 to-fuchsia-600 bg-clip-text text-transparent">
+              Home of Premium
+            </span>
+            <br />
+            <span className="bg-gradient-to-r from-emerald-600 via-teal-600 to-green-600 bg-clip-text text-transparent">
+              Fresh Cut Flowers
+            </span>
           </h2>
-          <p className="text-blue-900 max-w-2xl mx-auto mb-8 text-lg">
+          <p className="text-gray-700 max-w-2xl mx-auto mb-10 text-lg leading-relaxed animate-[fadeInUp_0.8s_ease-out_0.4s_both]">
             LAMIFLORA LIMITED produces world-class fresh-cut flowers, expertly
             dried floral products, and customized bouquets for clients across the
             globe. A vertically integrated grower and consolidator specializing
             in premium fresh cut flowers, high grade dried flowers, and creative
             custom bouquets and floral mixes.
           </p>
-          <Button onClick={navigateToCollection} variant="rose">
-            Explore Our Collection
-          </Button>
+          <div className="animate-[fadeInUp_0.8s_ease-out_0.6s_both]">
+            <Button onClick={navigateToCollection} variant="rose" className="shadow-lg shadow-rose-200/50 hover:shadow-xl hover:shadow-rose-300/50 transition-shadow duration-300 text-base px-8 py-3">
+              Explore Our Collection
+            </Button>
+          </div>
         </div>
       </div>
 
