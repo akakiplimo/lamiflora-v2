@@ -60,7 +60,7 @@ export default function Footer() {
               placeholder="Enter your email"
               className="flex-1 px-4 py-3 rounded-md bg-white/10 border border-white/30 text-white placeholder:text-white/60 focus:outline-none focus:border-white/60 text-sm"
             />
-            <button className="bg-forest hover:cursor-pointer hover:bg-green-600 text-white border font-medium px-6 py-3 rounded-md transition-colors text-sm flex items-center justify-center gap-2">
+            <button className="bg-forest hover:cursor-pointer hover:bg-white text-white hover:text-green-950 border font-medium px-6 py-3 rounded-md transition-colors text-sm flex items-center justify-center gap-2">
               Subscribe
               <ArrowRight className="w-4 h-4" />
             </button>
@@ -74,7 +74,7 @@ export default function Footer() {
         <div className="flex justify-end container-custom pt-4">
           <button
             onClick={scrollToTop}
-            className="w-10 h-10 rounded-full bg-forest hover:bg-forest-500 flex items-center justify-center transition-colors -mt-9 relative z-10 shadow-lg"
+            className="w-10 h-10 rounded-full cursor-pointer bg-green-950 hover:bg-green-400 flex items-center justify-center transition-colors -mt-9 relative z-10 shadow-lg"
             aria-label="Scroll to top"
           >
             <ChevronUp className="w-5 h-5 text-white" />
