@@ -23,12 +23,14 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
+.dark {
+  --background: #0a0f1a;
+  --foreground: #e8e8e8;
+  --cream: #111827;
+  --white: #1a1f2e;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 body {
   background: var(--background);
@@ -52,6 +54,10 @@ body {
     font-family: 'Playfair Display', Georgia, serif;
     @apply font-semibold text-[var(--forest)];
     line-height: 1.2;
+  }
+
+  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    color: #e8e8e8;
   }
 
   h1 {
@@ -99,7 +105,7 @@ body {
 
   /* Card Styles */
   .card {
-    @apply bg-white rounded-lg shadow-sm p-6 transition-all duration-300 hover:shadow-md;
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 transition-all duration-300 hover:shadow-md;
   }
 
   .card-hover {
@@ -164,7 +170,7 @@ body {
 
   /* Navigation styles */
   .nav-link {
-    @apply relative text-gray-700 transition-colors duration-300 font-medium hover:text-[var(--forest)];
+    @apply relative text-gray-700 dark:text-gray-300 transition-colors duration-300 font-medium hover:text-[var(--forest)] dark:hover:text-green-400;
   }
 
   .nav-link::after {
@@ -178,7 +184,7 @@ body {
 
   /* Form inputs */
   .input-field {
-    @apply w-full px-4 py-3 border border-gray-300 focus:outline-none focus:border-[var(--rose)] focus:ring-1 focus:ring-[var(--rose)] transition-all duration-300;
+    @apply w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100 focus:outline-none focus:border-[var(--rose)] focus:ring-1 focus:ring-[var(--rose)] transition-all duration-300;
   }
 
   /* Image overlay effect */

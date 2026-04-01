@@ -1,6 +1,10 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
+import Header from '@/components/sections/Header';
+import Footer from '@/components/sections/Footer';
+import WhatsAppButton from '@/components/ui/whatsapp-button';
+import ThemeProvider from '@/components/providers/ThemeProvider';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -50,9 +54,16 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="Lamiflora" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-gray-950 text-foreground dark:text-gray-100 transition-colors duration-300`}
       >
-        {children}
+        <ThemeProvider>
+          <WhatsAppButton />
+          <Header />
+          <main className="min-h-screen">
+            {children}
+          </main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
