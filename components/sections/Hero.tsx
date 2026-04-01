@@ -90,7 +90,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-20 h-full flex items-center justify-center text-center">
         <div className="container-custom">
-          <h1 className="font-heading text-5xl md:text-6xl lg:text-8xl font-bold text-white mb-4 whitespace-pre-line leading-tight drop-shadow-lg transition-all duration-500">
+          <h1 className="font-heading text-5xl md:text-6xl lg:text-8xl font-bold !text-white mb-4 whitespace-pre-line leading-tight drop-shadow-lg transition-all duration-500">
             {slides[currentSlide].title}
           </h1>
           <p className="text-white/80 text-lg md:text-xl mb-8 max-w-xl mx-auto font-light tracking-wide">

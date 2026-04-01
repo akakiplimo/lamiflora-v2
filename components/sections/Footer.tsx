@@ -47,7 +47,7 @@ export default function Footer() {
       {/* Newsletter Section */}
       <section className="py-16 bg-gray-900">
         <div className="container-custom text-center">
-          <h2 className="font-heading text-2xl md:text-3xl font-bold text-white mb-3">
+          <h2 className="font-heading text-2xl md:text-3xl font-bold !text-white mb-3">
             Join Our Newsletter
           </h2>
           <p className="text-white/80 mb-8 max-w-lg mx-auto">
@@ -131,7 +131,7 @@ export default function Footer() {
 
             {/* Quick Links */}
             <div>
-              <h4 className="font-heading font-semibold text-white mb-5">
+              <h4 className="font-heading font-semibold !text-white mb-5">
                 Quick Links
               </h4>
               <ul className="space-y-2.5">
@@ -150,7 +150,7 @@ export default function Footer() {
 
             {/* Customer Service */}
             <div>
-              <h4 className="font-heading font-semibold text-white mb-5">
+              <h4 className="font-heading font-semibold !text-white mb-5">
                 Customer Service
               </h4>
               <ul className="space-y-2.5">
@@ -184,7 +184,7 @@ export default function Footer() {
 
             {/* Stay Connected */}
             <div>
-              <h4 className="font-heading font-semibold text-white mb-5">
+              <h4 className="font-heading font-semibold !text-white mb-5">
                 Stay Connected
               </h4>
               <p className="text-gray-400 text-sm mb-4">
