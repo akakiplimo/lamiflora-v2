@@ -2,119 +2,85 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Flower, Package, Truck, Sparkles } from 'lucide-react';
-
-const services = [
-  {
-    icon: Flower,
-    title: 'Premium Fresh-Cut Flowers',
-    description:
-      'We grow world-class summer flowers on our farms in Central Kenya, including Eryngium, Craspedia, Ammi Visnaga, Bupleurum, Alstroemeria, and Eucalyptus varieties.',
-    buttonText: 'Our Varieties',
-    color: 'text-rose',
-    bgColor: 'bg-rose/10',
-  },
-  {
-    icon: Package,
-    title: 'High Grade Dried Flowers',
-    description:
-      'We specialize in expertly dried floral products including Craspedia and ornamental grasses, preserved to maintain their beauty and quality.',
-    buttonText: 'View Dried Flowers',
-    color: 'text-forest',
-    bgColor: 'bg-forest/10',
-  },
-  {
-    icon: Sparkles,
-    title: 'Custom Bouquets & Floral Mixes',
-    description:
-      'We add value by creating customized bouquets, mixed flower packs, and special-order floral arrangements tailored to your specific needs.',
-    buttonText: 'Custom Orders',
-    color: 'text-lavender',
-    bgColor: 'bg-lavender/10',
-  },
-  {
-    icon: Truck,
-    title: 'Global Wholesale Export',
-    description:
-      'As wholesale exporters, we serve markets across Africa, the UK, Europe, Australia, Singapore, and the Middle East with reliable supply year round.',
-    buttonText: 'Export Inquiry',
-    color: 'text-gold-600',
-    bgColor: 'bg-gold/10',
-  },
-];
+import { ArrowRight, Globe, Package, Sparkles, Truck } from 'lucide-react';
 
 export default function Services() {
+  const handleWhatsAppClick = () => {
+    const phoneNumber = '254722667154';
+    const message = encodeURIComponent(
+      'Hi Lamiflora, I would like to request your export catalogue.',
+    );
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+  };
+
   return (
-    <section id="services" className="py-20 bg-white">
-      <div className="container-custom">
-        <div className="text-center mb-16">
-          <span className="text-rose font-semibold tracking-wider uppercase text-sm">
-            From our farm to your world
-          </span>
-          <h2 className="font-heading text-3xl md:text-4xl font-bold text-forest mt-3">
-            What We Offer
+    <section id="services" className="relative py-20 overflow-hidden">
+      {/* Dark Green Background with Floral Overlay */}
+      <div className="absolute inset-0 bg-[#0f2e23]" />
+      <div className="absolute inset-0 bg-[url('/images/hero-background.png')] bg-cover bg-center opacity-10" />
+
+      <div className="container-custom relative z-10">
+        <div className="text-center text-white">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
+            We Ship Worldwide
           </h2>
+          <p className="text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
+            Lamiflora ships products to over 10 countries. Premium flowers and
+            specialty products to Europe and the Middle East, maintaining
+            freshness and quality with our cold-chain logistics.
+          </p>
+
+          <Button
+            onClick={handleWhatsAppClick}
+            variant="outline"
+            className="border-white text-white hover:bg-white hover:text-green-950 px-8 group"
+          >
+            Request Catalogue
+            <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+          </Button>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => (
+        {/* Service Cards */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+          {[
+            {
+              icon: Package,
+              title: 'Premium Fresh-Cut Flowers',
+              description:
+                'World-class summer flowers from our farms in Central Kenya.',
+            },
+            {
+              icon: Sparkles,
+              title: 'Dried Floral Products',
+              description:
+                'Expertly dried flowers preserved for long-lasting beauty.',
+            },
+            {
+              icon: Globe,
+              title: 'Custom Bouquets & Mixes',
+              description:
+                'Tailored arrangements and mixed packs for every need.',
+            },
+            {
+              icon: Truck,
+              title: 'Global Export',
+              description:
+                'Reliable supply to Africa, UK, Europe, Australia & Middle East.',
+            },
+          ].map((service, index) => (
             <div
               key={service.title}
-              className="bg-cream rounded-xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 text-center animate-slide-up"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="bg-forest-800 rounded-xl p-6 text-center text-white hover:bg-forest-700 transition-all duration-300 border border-white/15 shadow-lg"
             >
-              {/* Icon with decorative floral elements */}
-              <div className="relative mb-6 inline-block">
-                {/* Decorative petals around icon */}
-                <div
-                  className={`w-20 h-20 rounded-full ${service.bgColor} flex items-center justify-center mx-auto relative`}
-                >
-                  <service.icon className={`w-10 h-10 ${service.color}`} />
-                </div>
-                {/* Small petal decorations */}
-                <svg
-                  viewBox="0 0 80 80"
-                  className="absolute -top-2 -left-2 w-24 h-24 pointer-events-none"
-                >
-                  <ellipse
-                    cx="15"
-                    cy="40"
-                    rx="6"
-                    ry="10"
-                    fill="#C41E3A"
-                    opacity="0.2"
-                    transform="rotate(-30 15 40)"
-                  />
-                  <ellipse
-                    cx="65"
-                    cy="40"
-                    rx="6"
-                    ry="10"
-                    fill="#C41E3A"
-                    opacity="0.2"
-                    transform="rotate(30 65 40)"
-                  />
-                  <ellipse
-                    cx="40"
-                    cy="10"
-                    rx="5"
-                    ry="8"
-                    fill="#FFAA8A"
-                    opacity="0.3"
-                  />
-                </svg>
+              <div className="w-14 h-14 rounded-full bg-emerald-600/30 flex items-center justify-center mx-auto mb-4">
+                <service.icon className="w-7 h-7 text-emerald-300" />
               </div>
-
-              <h3 className="font-heading text-lg font-semibold text-forest mb-3 leading-tight">
+              <h3 className="font-heading text-lg font-semibold text-white mb-2">
                 {service.title}
               </h3>
-              <p className="text-gray-600 text-sm mb-6 leading-relaxed">
+              <p className="text-gray-300 text-sm leading-relaxed">
                 {service.description}
               </p>
-              <Button variant="outline" size="sm" className="group">
-                {service.buttonText}
-                <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-              </Button>
             </div>
           ))}
         </div>
