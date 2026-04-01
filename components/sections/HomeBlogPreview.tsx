@@ -9,7 +9,8 @@ import { ArrowRight, Clock, Calendar, User } from 'lucide-react';
 const blogPosts = [
   {
     title: 'Growing Your Own Herb Garden',
-    excerpt: 'A beginner\'s guide to starting your own herb garden with tips and tricks from our experienced farmers.',
+    excerpt:
+      "A beginner's guide to starting your own herb garden with tips and tricks from our experienced farmers.",
     category: 'Sustainability',
     author: 'Lamiflora Team',
     date: 'January 20, 2025',
@@ -18,7 +19,8 @@ const blogPosts = [
   },
   {
     title: 'Color, Commerce & Collaboration: Lamiflora at IFTEX 2025',
-    excerpt: 'Discover how sustainable farming practices are revolutionizing the industry.',
+    excerpt:
+      'Discover how sustainable farming practices are revolutionizing the industry.',
     category: 'Quality',
     author: 'Lamiflora Team',
     date: 'June 7, 2025',
@@ -27,7 +29,8 @@ const blogPosts = [
   },
   {
     title: 'From Farm to Table: Our Quality Promise',
-    excerpt: 'Learn about our commitment to delivering the freshest produce directly from our farms.',
+    excerpt:
+      'Learn about our commitment to delivering the freshest produce directly from our farms.',
     category: 'Quality',
     author: 'Lamiflora Team',
     date: 'March 12, 2025',
@@ -45,7 +48,8 @@ export default function HomeBlogPreview() {
             From Our Blog
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mt-3 max-w-2xl mx-auto">
-            Discover farming tips, sustainability insights, and the latest news from Lamiflora farms.
+            Discover farming tips, sustainability insights, and the latest news
+            from Lamiflora farms.
           </p>
         </div>
 
@@ -100,7 +104,7 @@ export default function HomeBlogPreview() {
           <Link href="/blog">
             <Button
               variant="outline"
-              className="border-forest text-forest hover:bg-forest hover:text-white group"
+              className="border-forest text-forest hover:bg-green-950 hover:text-white group"
             >
               Read More Articles
               <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />

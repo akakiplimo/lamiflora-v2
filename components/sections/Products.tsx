@@ -261,7 +261,7 @@ export default function Products() {
       <section className="relative py-16 bg-gradient-to-br from-forest via-forest to-green-800 overflow-hidden">
         <div className="absolute inset-0 bg-[url('/images/hero-background.png')] bg-cover bg-center opacity-15" />
         <div className="container-custom relative z-10 text-center">
-          <h1 className="font-heading text-4xl md:text-5xl font-bold text-white mb-3">
+          <h1 className="font-heading text-4xl md:text-5xl font-bold !text-white mb-3">
             All Products
           </h1>
           <p className="text-white/80 text-lg max-w-2xl mx-auto">

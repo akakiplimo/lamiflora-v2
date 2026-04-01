@@ -21,7 +21,7 @@ export default function Services() {
 
       <div className="container-custom relative z-10">
         <div className="text-center text-white">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 !text-white">
             We Ship Worldwide
           </h2>
           <p className="text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
@@ -75,7 +75,7 @@ export default function Services() {
               <div className="w-14 h-14 rounded-full bg-emerald-600/30 flex items-center justify-center mx-auto mb-4">
                 <service.icon className="w-7 h-7 text-emerald-300" />
               </div>
-              <h3 className="font-heading text-lg font-semibold text-white mb-2">
+              <h3 className="font-heading text-lg font-semibold !text-white mb-2">
                 {service.title}
               </h3>
               <p className="text-gray-300 text-sm leading-relaxed">
