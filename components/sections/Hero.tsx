@@ -99,13 +99,13 @@ export default function Hero() {
           <div className="flex items-center justify-center gap-4 flex-wrap px-12">
             <Link
               href="/flowers"
-              className="inline-flex items-center justify-center bg-forest hover:bg-green-600 text-white px-8 py-3 text-base rounded-sm font-medium transition-colors duration-300"
+              className="inline-flex items-center justify-center bg-green-950 hover:bg-white text-white hover:text-green-950 px-8 py-3 text-base rounded-sm font-medium transition-colors duration-300"
             >
               Shop Our Collection
             </Link>
             <Link
               href="/contacts"
-              className="inline-flex items-center justify-center border-2 border-white text-white hover:bg-green-600 hover:text-forest px-8 py-3 text-base rounded-sm font-medium transition-colors duration-300"
+              className="inline-flex items-center justify-center border-2 border-white text-white hover:bg-white hover:text-green-950 px-8 py-3 text-base rounded-sm font-medium transition-colors duration-300"
             >
               Learn More
             </Link>
