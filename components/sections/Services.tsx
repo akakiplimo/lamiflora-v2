@@ -26,7 +26,7 @@ export default function Services() {
           </h2>
           <p className="text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
             Lamiflora ships products to over 10 countries. Premium flowers and
-            specialty products to Europe and the Middle East, maintaining
+            speciality products to Europe and the Middle East, maintaining
             freshness and quality with our cold-chain logistics.
           </p>
 

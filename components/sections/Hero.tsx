@@ -18,8 +18,8 @@ const slides = [
   },
   {
     image: '/images/flowers/eryngium.jpg',
-    title: 'Exotic\nVarieties',
-    subtitle: 'Unique flowers for every occasion',
+    title: 'Elegant\nBlooms',
+    subtitle: 'Unique arrangements for every occasion',
   },
   {
     image: '/images/flowers/eucalyptus.jpg',
